@@ -9,15 +9,15 @@ module.exports = {
     },
     devServer: {
         port: 8090,
-        contentBase: './public'
+        contentBase: './public',
     },
     resolve: {
         extensions: ['', '.js', '.jsx'],
-        alias :{
+        alias: {
             modules: __dirname + '/node_modules'
         }
     },
-    plugins: [
+    plugins: [ 
         new ExtractTextPlugin('app.css')
     ],
     module: {
@@ -27,14 +27,14 @@ module.exports = {
             exclude: /node_modules/,
             query: {
                 presets: ['es2015', 'react'],
-                plugin: ['transform-object-rest-spread']
+                plugins: ['transform-object-rest-spread']
             }
         }, {
             test: /\.css$/,
-            loader: ExtracttextPlugin.extract('style-loader', 'css-loader')
+            loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
         }, {
-            test: /\.woof|.woff2|.ttf|.eot|.svg*.*$/,
-            loader:'file'
+            test: /\.woff|.woff2|.ttf|.eot|.svg*.*$/,
+            loader: 'file'
         }]
     }
 }
