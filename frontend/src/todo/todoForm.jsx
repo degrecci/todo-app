@@ -4,10 +4,12 @@ import IconButton from '../template/iconButton'
 
 const TodoForm = (props) => {
     const keyHandler = (e) => {
+        if (e.key === 'Escape'){
+            props.handleClear();
+            return
+        }
         if(e.key === 'Enter') {
             e.shiftKey ? props.handleSearch() : props.handleAdd()
-        } else if (e.key === 'Escape') {
-            props.handleClear()
         }
     }
     
