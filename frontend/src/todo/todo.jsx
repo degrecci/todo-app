@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { Component } from 'react';
+import axios from 'axios';
 
-import PageHeader from '../template/pageHeader'
-import TodoForm from './todoForm'
-import TodoList from './todoList'
+import PageHeader from '../template/pageHeader';
+import TodoForm from './todoForm';
+import TodoList from './todoList';
 
-const URL = 'http://localhost:8080/api/todos'
+const URL = 'http://localhost:8080/api/todos';
 
-export default class Todo extends Component {
+class Todo extends Component {
     constructor(props) {
         super(props)
         this.state = { description: '', list: [] }
@@ -80,3 +80,5 @@ export default class Todo extends Component {
         )
     }
 }
+
+export default Todo;

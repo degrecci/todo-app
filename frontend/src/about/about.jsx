@@ -1,7 +1,7 @@
-import React from 'react'
-import PageHeader from '../template/pageHeader'
+import React from 'react';
+import PageHeader from '../template/pageHeader';
 
-export default props => (
+const About = (props) => (
     <div>
         <PageHeader name='Sobre' small='Nós'>Sobre</PageHeader>
 
@@ -13,3 +13,5 @@ export default props => (
         <p>Lorem ipsum dolor sit amet...</p>
     </div>
 )
+
+export default About;

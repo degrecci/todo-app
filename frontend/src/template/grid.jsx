@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
-export default class Grid extends Component {
+class Grid extends Component {
     toCssClasses(numbers) {
         const cols = numbers ? numbers.split(' ') : []
         let classes = ''
@@ -22,3 +22,5 @@ export default class Grid extends Component {
         )
     }
 }
+
+export default Grid;
